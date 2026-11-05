@@ -1,0 +1,38 @@
+/* Homepage product hierarchy study; chosen concept image is used as supplied. */
+.signature-home-hero .hero-grid{grid-template-columns:1fr 1fr;min-height:660px;gap:32px}
+.signature-home-hero h1{font-size:clamp(42px,4.6vw,64px);line-height:1.3;letter-spacing:-.025em}
+.signature-home-hero .lead{font-size:19px;line-height:1.9;margin:22px 0}
+.signature-contents{display:flex;align-items:center;gap:18px;margin:24px 0 28px;color:#FFF8EB}
+.signature-contents span{display:flex;align-items:baseline;gap:5px;font-size:15px}
+.signature-contents strong{font-size:35px;line-height:1;font-weight:700}
+.signature-contents small{font-size:13px;margin-left:4px}
+.signature-contents span:nth-child(2){opacity:.65;font-size:20px}
+.signature-composition{margin:0;text-align:center;min-width:0}
+.signature-composition a{display:block;color:#FFF8EB}
+.signature-composition-art{max-width:660px;margin:0 auto;overflow:hidden}
+.signature-composition-art img{display:block;width:100%;height:auto}
+.signature-composition figcaption{display:flex;flex-direction:column;gap:3px;line-height:1.6}
+.signature-composition figcaption span{font-size:10px;letter-spacing:.16em;opacity:.75}
+.signature-composition figcaption strong{font-size:14px;font-weight:500}
+.signature-composition figcaption small{font-size:12px;opacity:.82}
+.signature-featured .signature-card-copy h3{font-size:clamp(32px,3.3vw,44px)}
+.signature-first>.collection-card:not(.signature-featured) .collection-image{height:260px}
+.signature-story{background:#FFF8EB;padding:92px 0 84px}
+.signature-story .eyebrow{margin-bottom:14px}
+.signature-story h2{font-size:clamp(30px,3.5vw,44px);line-height:1.4;margin-bottom:42px}
+.signature-story ol{display:grid;grid-template-columns:repeat(3,1fr);gap:38px;list-style:none;padding:0;margin:0 0 30px}
+.signature-story li{border-top:1px solid #00816855;padding-top:20px}
+.signature-story li span{display:block;color:#008168;font-size:12px;font-weight:650;margin-bottom:14px}
+.signature-story li strong{display:block;font-size:19px;font-weight:650}
+.signature-story li p{margin:8px 0 0;color:#496459;font-size:14px}
+.signature-featured .collection-image img{width:100%;height:100%;object-fit:contain}
+@media(max-width:1000px){.signature-home-hero .hero-grid{min-height:560px}}
+@media(max-width:700px){.signature-home-hero .hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:24px;padding-top:32px;padding-bottom:32px;min-height:0}.signature-home-hero h1{font-size:clamp(32px,8.5vw,42px);line-height:1.3}.signature-home-hero .lead{font-size:15px;margin:16px 0}.signature-contents{margin:17px 0 20px;gap:14px}.signature-contents strong{font-size:28px}.signature-contents small{font-size:12px}.signature-composition figcaption{margin-top:22px}.signature-composition figcaption strong{font-size:12px}.signature-first>.collection-card:not(.signature-featured) .collection-image{height:230px}}
+@media(max-width:700px){.signature-story{padding:60px 0}.signature-story h2{font-size:29px;margin-bottom:30px}.signature-story ol{grid-template-columns:1fr;gap:0;margin-bottom:22px}.signature-story li{display:grid;grid-template-columns:36px 1fr;gap:0 12px;padding:15px 0}.signature-story li span{grid-row:1/3;margin:3px 0 0}.signature-story li strong{font-size:16px}.signature-story li p{font-size:13px;margin-top:3px}.signature-featured .collection-image{height:auto;min-height:160px}.signature-featured .collection-image img{height:auto;max-height:260px}}
+
+/* Let the photo's natural aspect ratio determine the card's height. */
+@media(max-width:700px){
+  .signature-first>.collection-card:not(.signature-featured) .collection-image.photo{height:auto;aspect-ratio:3/2;margin-bottom:24px}
+  .signature-first>.collection-card:not(.signature-featured) .collection-image.photo img{width:100%;height:100%;object-fit:cover}
+  .signature-first>.collection-card:not(.signature-featured)>.eyebrow{line-height:1.7;letter-spacing:.1em}
+}

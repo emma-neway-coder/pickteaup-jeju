@@ -1,0 +1,21 @@
+#flavor-1 { position: relative; isolation: isolate; touch-action: pan-y; }
+#flavor-1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(ellipse at 23% 25%, rgba(253, 128, 41, .22), transparent 65%),
+    radial-gradient(ellipse at 77% 12%, rgba(139, 164, 206, .18), transparent 65%);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  transition: opacity 850ms ease !important;
+}
+@media (hover: hover) and (pointer: fine) {
+  #flavor-1:hover::before { opacity: 1; }
+}
+#flavor-1.is-dawn-lit::before, #flavor-1:focus-visible::before { opacity: 1; }
+#flavor-1:focus-visible { outline: 2px solid #008168; outline-offset: 0; }
+@media (prefers-reduced-motion: reduce) { #flavor-1::before { transition: none !important; } }

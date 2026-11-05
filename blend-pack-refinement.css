@@ -1,0 +1,16 @@
+/* Customer-facing packaging overview shared by the five blend pages. */
+.packaging .wrap { max-width: 1120px; }
+.packaging { padding-bottom: 76px; }
+.packaging .section-head { max-width: 660px; margin-bottom: 52px; }
+.packaging .section-head .eyebrow { letter-spacing: .1em; }
+.blend-pack-photo { max-width: 920px; margin: 0 auto; }
+.blend-pack-photo img { display: block; width: 100%; height: auto; }
+.blend-pack-photo figcaption {
+  color: #496459; font-size: 13px; line-height: 1.8;
+  letter-spacing: .04em; margin-top: 18px; text-align: center;
+}
+@media (max-width: 700px) {
+  .packaging { padding-bottom: 56px; }
+  .packaging .section-head { margin-bottom: 36px; }
+  .blend-pack-photo figcaption { font-size: 12px; margin-top: 15px; }
+}

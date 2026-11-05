@@ -1,0 +1,61 @@
+/* Review composition: approved front and back artwork remain unchanged. */
+.signature-composition .scene-visual {
+  position: relative; display: grid; place-items: center;
+  width: 100%; min-height: 440px; background: #edf1e7;
+  overflow: hidden; cursor: pointer; touch-action: manipulation;
+}
+.signature-composition .scene-visual img {
+  grid-area: 1 / 1; object-fit: contain;
+  transition: opacity 900ms cubic-bezier(.22,1,.36,1), transform 1100ms cubic-bezier(.22,1,.36,1) !important;
+}
+.signature-composition .case { width: min(45%, 245px); height: auto; box-shadow: 0 16px 30px #052d2624; }
+.signature-composition .inside { width: 94%; height: auto; opacity: 0; transform: translateY(8px) scale(.985); }
+.signature-composition[data-state="open"] .case { opacity: 0; transform: translateY(-5px) scale(1.025); }
+.signature-composition[data-state="open"] .inside { opacity: 1; transform: none; }
+.signature-composition .scene-visual:focus-visible, .signature-composition .open-button:focus-visible { outline: 3px solid #fd8029; outline-offset: 4px; }
+.signature-composition .open-button { align-self: center; border: 1px solid #fff8eb99; background: transparent; color: #fff8eb; border-radius: 3px; margin-top: 10px; padding: 8px 16px; font-size: 13px; }
+@media(max-width:700px) {
+  .signature-composition .scene-visual { min-height: 0; aspect-ratio: 1.18; }
+  .signature-composition .case { width: 45%; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .signature-composition .scene-visual img { transition: none !important; }
+}
+.signature-first > .collection-card:not(.signature-featured) .collection-image.book-pair {
+  height: auto;
+  aspect-ratio: 3 / 2;
+  padding: 7% 8%;
+  overflow: hidden;
+  background: #e6ecdf;
+}
+.book-pair-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(10px, 2.5vw, 24px);
+  width: 100%;
+  height: 100%;
+}
+.book-pair .book-cover-art {
+  position: relative;
+  display: block;
+  height: 100%;
+  aspect-ratio: 2 / 3;
+  flex: 0 1 auto;
+  background: #faf4e5;
+  box-shadow: 3px 3px 0 #eee6d3, 6px 6px 0 #d9d3c0, 9px 12px 18px #052d2624;
+}
+.book-pair .book-cover-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+}
+@media(max-width:700px) {
+  .signature-first > .collection-card:not(.signature-featured) .collection-image.book-pair {
+    height: auto;
+    aspect-ratio: 3 / 2;
+    padding: 6% 8%;
+    margin-bottom: 24px;
+  }
+}
