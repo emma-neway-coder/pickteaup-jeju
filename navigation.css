@@ -145,3 +145,44 @@
 @media (prefers-reduced-motion: reduce) {
   .product-navigation a, .button, .button > span, .signature-featured img { transition: none; transform: none; }
 }
+.purchase-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  min-width: 190px;
+  padding: 14px 26px;
+  border: 1px solid #c96a28;
+  border-radius: 5px;
+  background: #f6d1af;
+  color: #56351f;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.6;
+  opacity: 1;
+  cursor: not-allowed;
+}
+.product-hero .purchase-status { margin-top: 18px; }
+.signature-purchase { margin: 30px auto 0; text-align: center; }
+.blend-links a > .current-blend-label {
+  margin-left: auto;
+  color: #005e4e;
+  font-size: 12px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .product-hero .purchase-status { width: 100%; }
+  .signature-purchase .purchase-status { width: min(100%, 320px); }
+}
+.skip-link {
+  position: fixed;
+  top: -120px;
+  left: 24px;
+  z-index: 100;
+  padding: 15px;
+  background: #fff8eb;
+  color: #285bb8;
+}
+.skip-link:focus { top: 12px; }
