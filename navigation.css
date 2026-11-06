@@ -152,10 +152,10 @@
   min-height: 52px;
   min-width: 190px;
   padding: 14px 26px;
-  border: 1px solid #c96a28;
+  border: 1px solid #c9d1c2;
   border-radius: 5px;
-  background: #f6d1af;
-  color: #56351f;
+  background: #ede5d5;
+  color: #285bb8;
   font: inherit;
   font-size: 16px;
   font-weight: 650;
@@ -186,3 +186,19 @@
   color: #285bb8;
 }
 .skip-link:focus { top: 12px; }
+
+/* Product availability uses the same dimensions on every product page. */
+.purchase-status,
+.product-hero .purchase-status,
+.signature-purchase .purchase-status {
+  width: min(100%, 220px);
+  min-width: 0;
+  min-height: 52px;
+  margin: 0;
+}
+.signature-purchase { margin: 24px auto 0; }
+.listing-hero > .purchase-status { margin-top: 0; }
+.flavor-hero .purchase-status { margin-top: 18px; }
+.purchase-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.purchase-placement { margin: 40px auto 0; padding: 0 24px; text-align: center; }
+.purchase-placement .purchase-status { width: min(100%, 220px); margin: 0; }

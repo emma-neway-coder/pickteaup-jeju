@@ -10,12 +10,12 @@
     opened = value;
     scene.dataset.state = value ? 'open' : 'closed';
     button.setAttribute('aria-expanded', String(value));
-    button.innerHTML = value ? '지함 표지 다시 보기 <span aria-hidden="true">↺</span>' : '지함 안을 살펴보기';
+    button.innerHTML = value ? '지함 표지 다시 보기 <span aria-hidden="true">↺</span>' : '픽티북 안쪽 펼쳐보기';
     if (label) label.textContent = value ? '02 / 안에 담긴 것들' : '01 / 지함을 만나다';
     cover.setAttribute('aria-hidden', String(value));
     inside.setAttribute('aria-hidden', String(!value));
     visual.setAttribute('aria-pressed', String(value));
-    visual.setAttribute('aria-label', value ? '지함 표지 다시 보기' : '지함 안을 살펴보기');
+    visual.setAttribute('aria-label', value ? '지함 표지 다시 보기' : '픽티북 안쪽 펼쳐보기');
   };
   setOpen(false);
   button.addEventListener('click', () => setOpen(!opened));
