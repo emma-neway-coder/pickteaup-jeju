@@ -59,3 +59,49 @@
     margin-bottom: 24px;
   }
 }
+
+/* Keep both product image frames aligned at every viewport width. */
+.signature-first > .collection-card:not(.signature-featured) .collection-image.photo,
+.signature-first > .collection-card:not(.signature-featured) .collection-image.book-pair {
+  height: auto;
+  aspect-ratio: 3 / 2;
+  margin-bottom: 24px;
+}
+.signature-first > .collection-card:not(.signature-featured) .collection-image.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Images must fit their own grid track, even in narrow embedded browsers. */
+.signature-first > .collection-card { min-width: 0; }
+.signature-first > .collection-card .collection-image { min-width: 0; max-width: 100%; }
+.collection-card.signature-featured { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); }
+.signature-featured .collection-image { min-width: 0; overflow: hidden; }
+.signature-featured .collection-image img { width: 100%; max-width: 100%; object-fit: contain; }
+.signature-first > .collection-card:not(.signature-featured) .collection-image.photo,
+.signature-first > .collection-card:not(.signature-featured) .collection-image.book-pair {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+.signature-first > .collection-card:not(.signature-featured) .collection-image.photo img {
+  position: absolute;
+  inset: 0;
+}
+.book-pair-inner {
+  position: absolute;
+  inset: 8%;
+  width: auto;
+  height: auto;
+}
+.book-pair .book-cover-art {
+  width: min(38%, 210px);
+  height: auto;
+  min-width: 0;
+  flex: 0 1 auto;
+}
+@media (max-width: 700px) {
+  .collection-card.signature-featured { grid-template-columns: minmax(0, 1fr); }
+}
