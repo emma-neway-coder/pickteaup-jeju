@@ -48,6 +48,19 @@
 .site-header.product-navigation .brand-story-link[aria-current="page"] { color: #285BB8; text-decoration: underline; }
 .product-navigation a:focus-visible { outline: 3px solid #285BB8; outline-offset: 4px; }
 
+@media (width > 700px) {
+  .site-header.product-navigation .brand-story-link {
+    padding: 10px 2px;
+    border-bottom: 2px solid transparent;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .site-header.product-navigation .brand-story-link[aria-current="page"] {
+    border-bottom-color: #285BB8;
+    text-decoration: none;
+  }
+}
+
 .signature-home-hero .hero-grid { grid-template-columns: 1.15fr .85fr; min-height: 590px; padding-top: 54px; padding-bottom: 54px; gap: 50px; }
 .signature-home-hero h1 { font-size: clamp(34px, 4vw, 53px); letter-spacing: .025em; }
 .signature-home-hero .lead { font-size: 18px; margin: 24px 0 28px; }
@@ -202,3 +215,19 @@
 .purchase-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
 .purchase-placement { margin: 40px auto 0; padding: 0 24px; text-align: center; }
 .purchase-placement .purchase-status { width: min(100%, 220px); margin: 0; }
+
+/* 제작자 크레딧 (모든 페이지 하단) */
+.footer-credit { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 24px; margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line, #cedacf); font-size: 13px; line-height: 1.8; letter-spacing: .06em; color: var(--muted, #496459); }
+.footer-credit p { margin: 0; font-size: inherit; color: inherit; }
+.footer-credit strong { color: var(--ink, #052D26); font-weight: 650; }
+.footer-credit a { display: inline-flex; align-items: center; min-height: 44px; color: var(--blue, #285BB8); text-decoration: underline; text-underline-offset: 4px; }
+.closing .footer-credit { justify-content: center; flex-direction: column; margin-top: 40px; border-top-color: #fff8eb45; color: #fff8ebcc; font-size: 13px; }
+.closing .footer-credit p { margin-top: 0; font-size: 13px; }
+.closing .footer-credit strong { color: var(--cream, #FFF8EB); }
+.closing .footer-credit a { color: var(--cream, #FFF8EB); }
+@media (max-width: 700px) {
+  .footer-credit { flex-direction: column; align-items: flex-start; font-size: 12px; }
+  .footer-credit .credit-sep { display: none; }
+  .footer-credit p:last-child { display: flex; flex-direction: column; }
+  .closing .footer-credit { align-items: center; }
+}
